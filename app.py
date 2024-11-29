@@ -16,11 +16,11 @@ def create_synthetic_data():
     learning_styles = []
     for i in range(num_samples):
         if score[i] > 80 and time_video[i] > 120:
-            learning_styles.append('Visual')
+            learning_styles.append('Visual: Prefers video-based learning')
         elif score[i] > 60 and time_quiz[i] > 60:
-            learning_styles.append('Auditory')
+            learning_styles.append('Auditory: Prefers audio or lecture-based learning')
         else:
-            learning_styles.append('Kinesthetic')
+            learning_styles.append('Kinesthetic: Prefers hands-on or activity-based learning')
 
     # Create DataFrame
     data = pd.DataFrame({
