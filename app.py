@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
+
 # Function to create a synthetic dataset
 def create_synthetic_data():
     np.random.seed(42)
