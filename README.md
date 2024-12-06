@@ -11,7 +11,7 @@ This project is designed to predict a student's preferred learning style based o
 ## Libraries Used
 The following libraries are used in this project:
 
-- **Flask**: For creating the web application.
+- **Streamlit**: For creating the interactive web application.
 - **scikit-learn**: For building and deploying the machine learning model.
 - **pandas**: For handling input and structured data.
 - **numpy**: For numerical computations.
@@ -34,6 +34,10 @@ numpy
 2. Navigate to the project directory:
    ```bash
    cd Student-Learning-Style-Prediction
+   ```
+3. Run the application:
+   ```bash
+   streamlit run app.py
    ```
 3. Install the required dependencies:
    ```bash
