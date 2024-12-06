@@ -1,75 +1,95 @@
-# Student Learning Style Prediction App
+# Student Learning Style Prediction
 
-## Overview
-The **Student Learning Style Prediction App** is a web-based tool built using **Streamlit** that predicts a student's learning style (Visual, Auditory, or Kinesthetic) based on their study habits. It uses a **Random Forest Classifier** trained on a synthetic dataset to make predictions. This project is a demonstration of machine learning applications in educational contexts.
-
----
+This project is designed to predict a student's preferred learning style based on their responses to a set of questions. The application utilizes machine learning techniques to analyze input data and classify students into categories such as visual, auditory, or kinesthetic learners.
 
 ## Features
-- **Input Form**:
-  - Time spent watching videos (in minutes).
-  - Time spent solving quizzes (in minutes).
-  - Test score percentage.
-- **Real-Time Predictions**:
-  - Predicts one of three learning styles: Visual, Auditory, or Kinesthetic.
-- **Interactive UI**:
-  - Easy-to-use interface built with Streamlit.
+- **User Input**: Collects responses from users via a web interface.
+- **Machine Learning Model**: Predicts learning styles based on input data.
+- **Interactive Application**: Built using a lightweight framework for ease of use.
+- **Customizable**: Easily adaptable to include additional learning styles or parameters.
 
----
+## Libraries Used
+The following libraries are used in this project:
 
-## Dataset
-The dataset used for training is synthetic and contains the following features:
-- `time_video`: Time spent on videos (in minutes).
-- `time_quiz`: Time spent on quizzes (in minutes).
-- `score`: Test score (percentage).
-- `learning_style`: The target variable derived based on conditions:
-  - **Visual**: Score > 80% and time spent on videos > 120 minutes.
-  - **Auditory**: Score > 60% and time spent on quizzes > 60 minutes.
-  - **Kinesthetic**: All other cases.
-
-The dataset is created programmatically using `numpy` and `pandas`.
-
----
-
-## Installation and Setup
-Follow these steps to set up and run the app locally:
-
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/your-username/student-learning-style-app.git
-    cd student-learning-style-app
-    ```
-
-2. **Install dependencies**:
-    Make sure you have Python 3.7+ installed. Then run:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Run the app**:
-    ```bash
-    streamlit run app.py
-    ```
-
-4. Open the app in your browser (default: `http://localhost:8501`).
-
----
-
-## How It Works
-1. **Input Data**: The user provides values for time spent on videos, quizzes, and test score.
-2. **Prediction**: The trained **Random Forest Classifier** uses the input to predict the most likely learning style.
-3. **Output**: The app displays the predicted learning style instantly.
-
----
+- **Flask**: For creating the web application.
+- **scikit-learn**: For building and deploying the machine learning model.
+- **pandas**: For handling input and structured data.
+- **numpy**: For numerical computations.
 
 ## Requirements
-- Python 3.7 or higher
-- Libraries:
-  - `streamlit`
-  - `pandas`
-  - `numpy`
-  - `scikit-learn`
+To run the project, you need the following dependencies:
 
-Install these dependencies using:
 ```bash
-pip install -r requirements.txt
+flask
+scikit-learn
+pandas
+numpy
+```
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/alphacrypto246/Student-Learning-Style-Prediction.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Student-Learning-Style-Prediction
+   ```
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+1. Run the application:
+   ```bash
+   python app.py
+   ```
+2. Open your web browser and navigate to:
+   ```
+   http://localhost:5000
+   ```
+3. Input the required data and receive the predicted learning style.
+
+## File Structure
+- `app.py`: The main script for running the Flask application.
+- `model.pkl`: Pre-trained machine learning model for predictions.
+- `templates/`: Directory containing HTML templates for the web interface.
+- `static/`: Directory for static files like CSS and JavaScript.
+- `README.md`: Project documentation.
+- `requirements.txt`: List of Python dependencies.
+
+## Dataset
+The application requires a dataset of student responses and their corresponding learning styles for training and evaluation. The dataset should include:
+- Input features (e.g., questionnaire responses).
+- Target labels (e.g., visual, auditory, kinesthetic).
+
+## Results
+The application provides accurate predictions of learning styles based on user input. It can help educators tailor their teaching strategies to suit individual student needs.
+
+## Contributing
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-branch-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Description of changes"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-branch-name
+   ```
+5. Open a pull request.
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Acknowledgments
+Special thanks to the developers of the libraries used in this project and the open-source community for providing resources to build machine learning applications.
+
+---
+
+Feel free to raise issues or feature requests via the [Issues](https://github.com/alphacrypto246/Student-Learning-Style-Prediction/issues) tab.
